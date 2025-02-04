@@ -1,0 +1,91 @@
+/* src/components/ExploreMenu/ExploreMenu.module.css */
+
+/* Container for the Explore Menu Section */
+.exploreMenuContainer {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Heading for the Explore Menu Section */
+.heading {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Description text for the Explore Menu */
+.description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Menu List Container to make it horizontally scrollable */
+.menuListContainer {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+}
+
+/* Individual Menu Item */
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 130px;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.menuItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside the Menu Item (Circular) */
+.menuImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+.menuImage.active {
+  box-shadow: 0 0 15px rgba(38, 143, 255, 0.8); /* Add an active state */
+}
+
+.menuImage:hover {
+  box-shadow: 0 0 15px rgba(38, 143, 255, 0.8);
+}
+
+/* Name of the Menu Item */
+.menuName {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Custom scrollbar styles for horizontal scrolling */
+.menuListContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.menuListContainer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.menuListContainer::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.menuListContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
