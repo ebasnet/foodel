@@ -8,8 +8,9 @@ const Header = () => {
         <p className={styles.headerText}>
           Choose from diverse menu. Fill your appetite.
         </p>
-
-        <button className={styles.headerButton}>View Menu</button>
+        <a href="#explore-menu">
+          <button className={styles.headerButton}>View Menu</button>
+        </a>
       </div>
     </div>
   );

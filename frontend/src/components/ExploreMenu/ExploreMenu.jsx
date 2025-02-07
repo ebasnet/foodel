@@ -5,7 +5,7 @@ import styles from "./ExploreMenu.module.css";
 
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <div className={styles.exploreMenuContainer}>
+    <div className={styles.exploreMenuContainer} id="explore-menu">
       <h1 className={styles.heading}>Explore Our Varieties</h1>
       <p className={styles.description}>
         Choose from a diverse menu. Fill your appetite!

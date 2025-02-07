@@ -1,19 +1,17 @@
-/* src/components/ExploreMenu/ExploreMenu.module.css */
 
-/* Container for the Explore Menu Section */
 .exploreMenuContainer {
   text-align: center;
   padding: 40px 20px;
 }
 
-/* Heading for the Explore Menu Section */
+
 .heading {
   font-size: 36px;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* Description text for the Explore Menu */
+
 .description {
   font-size: 18px;
   color: #555;

@@ -1,9 +1,10 @@
 import { asset } from "../../assets/assets"; // Assuming assets.js contains your image paths
 import styles from "./navbar.module.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import Link from react-router-dom
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin, setShowInput }) => {
   const navigate = useNavigate();
   return (
     <div className={styles.navbar}>
@@ -17,9 +18,7 @@ const Navbar = () => {
       {/* Navbar Menu with Links */}
       <ul className={styles.navbarMenu}>
         <li>
-          <Link to="menu" className={styles.navbarLink}>
-            Menu
-          </Link>
+          <a href="#explore-menu">Menu</a>
         </li>
         <li>
           <Link to="/mobile-app" className={styles.navbarLink}>
@@ -46,7 +45,9 @@ const Navbar = () => {
           className={styles.navbarCartIcon}
           onClick={() => navigate("/cart")}
         />
-        <button className={styles.button}>Sign-in</button>
+        <button onClick={() => setShowLogin(true)} className={styles.button}>
+          Sign-in
+        </button>
       </div>
     </div>
   );

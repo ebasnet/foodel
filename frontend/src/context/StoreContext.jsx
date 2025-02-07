@@ -1,16 +1,19 @@
+/* eslint-disable react/prop-types */
 import { createContext } from "react";
 import { food_list } from "../assets/assets";
 
 export const StoreContext = createContext(null);
 
+// eslint-disable-next-line react-refresh/only-export-components
 const StoreContextProvider = (props) => {
   const contextValue = {
     food_list,
   };
   return (
-    <StoreContext.Provider value={contextValue}>
+    <StoreContext.Provider value={{ contextValue }}>
       {props.children}
     </StoreContext.Provider>
   );
 };
+
 export default StoreContextProvider;

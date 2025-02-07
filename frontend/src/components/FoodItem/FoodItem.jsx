@@ -1,5 +1,5 @@
 import { asset } from "../../assets/assets";
-import styles from "./FoodItem.module.css"; // Import the CSS Module
+import styles from "./FoodItem.module.css";
 
 const FoodItem = ({ id, name, price, description, image }) => {
   return (
