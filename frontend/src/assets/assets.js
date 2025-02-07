@@ -2,6 +2,10 @@ import noodle from './noodle.png'; // Changed to .png
 import logo from './logo.png'; // Changed to .png
 import search from './search.png'; 
 import cart from './cart.png';
+import removeIcon from './remove_icon_red.png';
+import addIcon from './add_icon_green.png';
+import  ratingImg from './rating_starts.png'
+import addIconWhite from './add_icon_white.png'
 
 import menu_1 from './pancake.png'; 
 import menu_2 from './lunch.png'; 
@@ -50,7 +54,10 @@ export const asset = {
     logo,
     search,
     cart,
-    cross_icon
+    cross_icon,
+    removeIcon,
+    addIcon,
+    ratingImg,addIconWhite 
 }
 
 export const menu_list = [

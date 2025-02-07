@@ -1,16 +1,40 @@
-/* eslint-disable react/prop-types */
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
 
 export const StoreContext = createContext(null);
 
-// eslint-disable-next-line react-refresh/only-export-components
 const StoreContextProvider = (props) => {
-  const contextValue = {
-    food_list,
+  const [cartItems, setCartItems] = useState({});
+
+  const addToCart = (itemId) => {
+    if (!cartItems[itemId]) {
+      setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+    } else {
+      setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    }
   };
+
+  // Function to remove items from the cart
+  const removeFromCart = (itemId) => {
+    setCartItems((prev) => {
+      const updatedCart = { ...prev };
+      if (updatedCart[itemId] > 1) {
+        updatedCart[itemId] -= 1; // Decrease quantity by 1 if more than 1
+      } else {
+        delete updatedCart[itemId]; // Remove item if quantity is 1
+      }
+      return updatedCart;
+    });
+  };
+
+  useEffect(() => {
+    console.log(cartItems);
+  }, [cartItems]);
+
   return (
-    <StoreContext.Provider value={{ contextValue }}>
+    <StoreContext.Provider
+      value={{ food_list, cartItems, addToCart, removeFromCart, setCartItems }}
+    >
       {props.children}
     </StoreContext.Provider>
   );
